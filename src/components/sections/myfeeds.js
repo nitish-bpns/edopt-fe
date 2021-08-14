@@ -82,7 +82,7 @@ export default function myfeeds() {
           </div>
           <div className="student-details">
             <p className="stud-name">Sakshi</p>
-            <p className="stud-age">6</p>
+            <p className="stud-age">Age: 6</p>
             <p className="stud-location">Delhi</p>
             <p className="stud-goal">Teacher</p>
           </div>
@@ -107,7 +107,7 @@ export default function myfeeds() {
           </div>
           <div className="student-details">
             <p className="stud-name">Jatin</p>
-            <p className="stud-age">15</p>
+            <p className="stud-age">Age: 15</p>
             <p className="stud-location">Karnal</p>
             <p className="stud-goal">Engineer</p>
           </div>
@@ -132,7 +132,7 @@ export default function myfeeds() {
           </div>
           <div className="student-details">
             <p className="stud-name">Diya</p>
-            <p className="stud-age">15</p>
+            <p className="stud-age">Age: 15</p>
             <p className="stud-location">Sonipat</p>
             <p className="stud-goal">Engineer</p>
           </div>

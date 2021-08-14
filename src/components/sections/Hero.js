@@ -233,7 +233,7 @@ const Hero = ({
                           tag="a"
                           color="primary"
                           wideMobile
-                          href="/Signup_Donor"
+                          href="/myfeeds"
                           style={{
                             backgroundColor: "#3a936c",
                             borderRadius: "5px",
@@ -352,7 +352,7 @@ const Hero = ({
                       <br />
                       Location: Karnal<br />
                       Age: 15 years<br />
-                      Dancer
+                      Teacher
                       <br className="remove-in-mobile" />
                       <br className="remove-in-mobile" />
                       <center>
@@ -405,7 +405,7 @@ const Hero = ({
                       <br />
                       Location: Sonipat<br />
                       Age: 15 years<br />
-                      Dancer
+                      Engineer
                       <br className="remove-in-mobile" />
                       <br className="remove-in-mobile" />
                       <center>
