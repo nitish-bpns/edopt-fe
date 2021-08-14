@@ -1,0 +1,814 @@
+
+
+
+.bodyColor{
+  background: linear-gradient(180deg, rgba(0, 151, 19, 0.1) 50%, rgba(0, 151, 19, 0) 54%), #FFFFFF;
+  box-shadow: inset 0px 10px 10px -10px #617264;
+  margin-top: 45px;
+}
+.stdCard {
+  margin: 7px;
+  
+}
+
+/*icon*/
+.columnIcon {
+  float: left;
+  width: 25%;
+  padding-top: 75px;
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+/* Clearfix (clear floats) */
+.rowIcon::after {
+  content: "";
+  clear: both;
+  display: table;
+  padding: 6px;
+}
+
+
+.whatwedo-video {
+  margin: auto;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-left: 0px;
+}
+
+.videoCard{
+  box-shadow: 0px 0px 5px #617264;
+  background-color: "";
+  margin: 0%;
+ height: 650px;
+  border-radius: 15px;
+}
+
+
+/*Sorting in feeds*/
+
+.sorting {
+  width: 84%;
+  margin: auto;
+  text-align: right;
+}
+
+#sort-location,
+#sort-name {
+  margin: 0 12px;
+  border-radius: 20px;
+  padding: 8px 22px;
+  outline: none;
+  border: 1px solid #d6cbcb;
+}
+
+/*sorting in feeds*/
+
+/*feeds*/
+
+.stud-name,
+.stud-age,
+.stud-location,
+.stud-goal {
+  margin-bottom: 5px;
+  color: #313131;
+  font-weight: 500;
+}
+
+.stud-name {
+  font-weight: 600;
+}
+
+.student-img {
+  height: 150px;
+  margin-top: 10px;
+}
+
+.feed-content {
+  width: 90%;
+  margin: auto;
+}
+
+.myCard {
+  border: 1px solid black;
+  display: inline-block;
+  width: 25%;
+  margin: 13px 50px;
+  border-radius: 15px;
+  height: 380px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.edoptbtn {
+  margin-left: 88px;
+  margin-bottom: 10px;
+}
+
+.photo {
+  margin: auto;
+  width: 125px;
+  height: 150px;
+}
+
+.student-details {
+  padding: 5px 46px;
+}
+
+/*feeds*/
+
+/* form */
+.line {
+  border: 0;
+  display: block;
+  height: 1px;
+  background: #25282c47;
+  margin-top: 8px;
+  margin-bottom: 25px;
+}
+
+.form-field,
+.form-icon {
+  display: inline-block;
+}
+
+.form-icon {
+  color: #4caf50;
+}
+
+.cancel {
+  font-size: 1.33em;
+  padding-left: 317px;
+  cursor: pointer;
+}
+
+.form-head {
+  line-height: 10px;
+  font-size: 30px;
+  display: inline-block;
+}
+
+.contactPopup {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.formPopup {
+  display: none;
+  position: fixed;
+  left: 45%;
+  top: 7%;
+  transform: translate(-50%, 5%);
+  border: 1px solid #f1f1f1;
+  border-radius: 15px;
+  z-index: 9;
+  background-color: white;
+  height: 450px;
+  width: 540px;
+  backdrop-filter: blur(2px);
+}
+.formContainer {
+  max-width: 540px;
+  padding: 0px;
+  background-color: white;
+  border-radius: 15px;
+  height: 450px;
+}
+.formContainer input[type="text"],
+.formContainer input[type="tel"],
+.formContainer input[type="email"] {
+  width: 90%;
+  padding: 15px;
+  margin: 0px 0 10px 0;
+  border: none;
+  border-bottom: 1px solid #9ca9b38a;
+  background-color: white;
+}
+.formContainer input[type="text"]:focus,
+.formContainer input[type="tel"]:focus,
+.formContainer input[type="email"]:focus {
+  outline: none;
+}
+
+.formContainer .btn {
+  padding: 12px 15px;
+  border: 1px transparent;
+  border-radius: 0 0 14px 14px;
+  background-color: #8ebf42;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 0px;
+  opacity: 0.8;
+  margin-top: 146px;
+}
+.formContainer .cancel {
+  background-color: #cc0000;
+}
+.formContainer .btn:hover,
+.openButton:hover {
+  opacity: 1;
+}
+
+/* form */
+
+
+.celebrity {
+  display: block;
+}
+
+.header-div {
+  border-radius: 15px;
+  width: 110px;
+  border: 2px solid black;
+  /* margin-top: auto; */
+  /* margin-bottom: auto; */
+  height: 10px;
+  justify-content: center;
+  background-color: black;
+  margin: auto;
+  display: inline-block;
+  border-radius: 28;
+}
+
+.header-camera {
+  border: 2px solid black;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.feed-student {
+  width: 60%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 210px;
+}
+#about:hover {
+  text-decoration: underline;
+}
+
+.web-footer {
+  height: 340px;
+}
+
+#about {
+  color: black;
+  text-decoration: none;
+}
+
+.step-img {
+  height: 665px;
+}
+
+.feature-img {
+  height: 395px;
+}
+
+.nav-links,
+.logo-image {
+  width: 40%;
+  display: inline-block;
+}
+
+.nav-links {
+  align-items: center;
+  margin-left: 170px;
+}
+
+.admin-nav {
+  width: 260px;
+}
+
+.nav-head {
+  margin-left: 57px;
+}
+
+
+#stu-video {
+  height: 300px;
+}
+.stud-video {
+  height: 300px;
+  width: 100%;
+}
+
+#fix-btn {
+  height: 50px;
+  position: fixed;
+  bottom: 5px;
+  right: 0;
+  width: 100%;
+  background-color: #ade4ad;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  color: #f1f1f1;
+  font-weight: bold;
+  font-size: 29px;
+  padding-top: 7px;
+}
+
+
+
+
+/*mobile video start*/
+
+.step-img {
+  height: 665px;
+}
+
+.mobile-video {
+  display: block;
+}
+.steps-text,
+.steps-video {
+  display: inline-block;
+}
+
+.steps-text {
+  float: left;
+  width: 50%;
+  height: 665px;
+}
+.steps-video {
+  width: 50%;
+}
+
+.mobile-body {
+  max-width: 326px;
+  height: 665px;
+  border: 1px solid rgba(89, 95, 39, 0.278431);
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 30px 4px rgb(185 17 65 / 13%);
+  box-shadow: 0 0 30px 4px rgb(185 17 65 / 13%);
+  margin: 20px auto 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.mobile-body .mobile-header {
+  width: 100%;
+  height: 40px;
+  background: #6d6d6d;
+}
+
+.mobile-body {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mobile-body .mobile-screen {
+  width: 100%;
+  height: 515px;
+  background: #fff;
+  position: relative;
+  text-align: center;
+}
+
+.mobile-body .mobile-footer {
+  width: 100%;
+  height: 44px;
+  background: #6d6d6d;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.mobile-body .mobile-footer .mobile-footer-button {
+  display: inline-block;
+  border: 1px solid #313131;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: 22px;
+}
+/*mobile video end*/
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* .row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column1 {
+  float: left;
+  width: 80%;
+}
+
+.column2 {
+  float: left;
+  width: 20%;
+}
+
+.column3 {
+  float: left;
+  width: 50%;
+}
+
+.column4 {
+  float: left;
+  width: 50%;
+}
+.column5 {
+  float: left;
+  width: 10%;
+}
+.abc {
+  padding: 3%;
+  margin: 1% 0% 4% 0%;
+  border: 1px solid #f1b12a;
+  border-radius: 20px;
+  box-shadow: 5px 5px #f1f1f1;
+}
+
+.columnl {
+  float: left;
+  width: 33%;
+}
+.columnb {
+  float: left;
+  width: 33%;
+}
+.columnr {
+  float: left;
+  width: 33%;
+}
+.column8 {
+  float: left;
+  width: 50%;
+}
+.columnq {
+  float: left;
+  width: 66%;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* toggle in label designing */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 52px;
+  background-color: red;
+  border-radius: 30px;
+  border: 2px solid gray;
+}
+
+/* After slide changes */
+.toggle:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: gray;
+  top: 1px;
+  left: 1px;
+  transition: all 0.5s;
+}
+
+/* Toggle text */
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* Checkbox cheked effect */
+.checkbox:checked + .toggle::after {
+  left: 49px;
+}
+
+/* Checkbox cheked toggle label bg color */
+.checkbox:checked + .toggle {
+  background-color: green;
+}
+
+/* Checkbox vanished */
+.checkbox {
+  display: none;
+}
+
+.main-container {
+  width: 50%;
+  padding: 2%;
+  border: 1px solid #f1b12a;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 7% 0;
+  border-radius: 20px;
+  box-shadow: 5px 5px #f1f1f1;
+}
+
+.details {
+  width: 40%;
+  display: inline-block;
+}
+
+.profile-img {
+  width: 50%;
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+
+  .columnIcon {
+    float: left;
+    width: 50%;
+    padding-top: 75px;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .rowIcon::after {
+    content: "";
+    clear: both;
+    display: table;
+    padding: 6px;
+  }
+  
+  .whatwedo-video {
+    margin: auto;
+    width: -webkit-fill-available;
+   
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .videoCard{
+    box-shadow: 0px 0px 5px #617264;
+    background-color: "";
+    margin: 0%;
+   
+    border-radius: 15px;
+  }
+
+
+
+  .column {
+    float: left;
+    width: 100%;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  .tiles-item-inner {
+    border: none;
+    width: 100%;
+  }
+  .column1 {
+    width: 60%;
+  }
+  .column2 {
+    width: 40%;
+  }
+
+  .abc {
+    padding: 3%;
+    margin: 1% 0% 4% 0%;
+    border: none;
+  }
+  .column8 {
+    float: left;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 464px) {
+
+
+  #fix-btn {
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    width: 100%;
+    background-color: #cae8ca;
+    border: 2px solid #4caf50;
+    text-align: center;
+  }
+
+  .whatwedo-video {
+    margin: auto;
+    width: -webkit-fill-available;
+   
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .videoCard{
+    box-shadow: 0px 0px 5px #617264;
+    background-color: "";
+    margin: 0%;
+   
+    border-radius: 15px;
+  }
+
+  .columnIcon {
+    float: left;
+    width: 100%;
+    padding-top: 75px;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .rowIcon::after {
+    content: "";
+    clear: both;
+    display: table;
+    padding: 6px;
+  }
+  
+
+
+
+  /*popup form*/
+
+  .formPopup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 7%;
+    transform: translate(-50%, 5%);
+    border: 1px solid transparent;
+    border-radius: 15px;
+    z-index: 9;
+    background-color: #f1f1f1f5;
+    height: 400px;
+    width: 360px;
+  }
+
+  .formContainer {
+    max-width: 360px;
+    padding: 0px;
+    background-color: #f1f1f1f5;
+    border-radius: 15px;
+    height: 400px;
+  }
+
+  .formContainer .btn {
+    padding: 12px 15px;
+    border: 1px transparent;
+    border-radius: 0 0 14px 14px;
+    background-color: #8ebf42;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 0px;
+    opacity: 0.8;
+    margin-top: 93px;
+  }
+  .edoptbtn {
+    margin-left: 18px;
+    width: 85%;
+  }
+  .myCard {
+    width: 75%;
+    margin: 13px 43px;
+  }
+  .sorting {
+    width: 95%;
+    text-align: center;
+  }
+  #sort-location,
+  #sort-name {
+    margin: 5px 12px;
+  }
+  #stu-video {
+    height: 125px;
+  }
+  .stud-video {
+    height: 135px;
+  }
+}
+
+
+
+
+
+
+  .reveal-from-bottom {
+    width: 40%;
+    margin: auto;
+  }
+  .remove-in-mobile {
+    display: none;
+  }
+  .main-container {
+    width: 80%;
+  }
+  .profile-img {
+    display: block;
+    width: 100%;
+  }
+  .details {
+    display: block;
+    width: 100%;
+  }
+  .main-container {
+    width: 80%;
+  }
+  .schedule-meet-btn {
+    width: 84%;
+  }
+
+  .mobile-body {
+    height: 287px;
+    border-radius: 14px;
+  }
+  .mobile-header {
+    height: 25px;
+  }
+  .mobile-footer {
+    height: 25px;
+  }
+
+  .steps-video {
+    width: 42%;
+  }
+
+  .web-footer {
+    height: 195px;
+  }
+
+  .step-img {
+    height: 290px;
+  }
+  .mobile-body .mobile-screen {
+    height: 200px;
+  }
+  .feed-student {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mobile-body .mobile-header {
+    height: 20px;
+  }
+  .mobile-body .mobile-footer {
+    height: 18px;
+  }
+  .celebrity {
+    width: 100%;
+  }
+  .header-camera {
+    border: 2px solid black;
+    display: inline-block;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 9px;
+    margin-bottom: 8px;
+    background-color: #ccc;
+
+  }
+
+  .cardGradient{
+    background: rgb(89,171,99);
+    background: radial-gradient(circle, rgba(89,171,99,0.7741138059701492) 70%, rgba(15,101,35,1) 100%);
+  }
+
+
+  .header-div {
+    border-radius: 15px;
+    width: 47px;
+    border: 2px solid black;
+    /* margin-top: auto; */
+    margin-bottom: 10px;
+    height: 4px;
+    justify-content: center;
+    background-color: black;
+    /* margin: auto; */
+    display: inline-block;
+    border-radius: 28;
+  }
+
+
+
