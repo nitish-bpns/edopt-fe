@@ -63,7 +63,7 @@
   "bugs": {
     "url": "https://github.com/nitish-bpns/edopt-fe/issues"
   },
-  "homepage": "https://github.com/nitish-bpns/edopt-fe#readme",
+  "homepage": ".",
   "main": "index.js",
   "keywords": [],
   "author": "",
