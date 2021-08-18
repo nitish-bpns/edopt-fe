@@ -502,47 +502,112 @@ const Hero = ({
               <div className="rowIcon">
                 <div className="columnIcon">
                   <center>
-                    <img src="money.png" style={{ width: "100%" }} /><p style={{ color: "black" }} >Money</p>
+                    <img src="money.png" style={{
+                      width: "100%",
+                      paddingBottom: "8px",
+                      boxShadow: "0px 0pc 10px",
+                      paddingLeft: "10px",
+                      paddingRight: "10px",
+                      paddingTop: "10px",
+                      borderRadius: "8px",
+                    }} /><p style={{ color: "black" }} >Money</p>
                   </center>
                 </div>
                 <div className="columnIcon">
                   <center>
-                    <img src="videocall.png" style={{ width: "100%" }} /><p style={{ color: "black" }} >Video Call</p>
+                    <img src="videocall.png" style={{
+                      width: "100%",
+                      paddingBottom: "8px",
+                      boxShadow: "0px 0pc 10px",
+                      paddingLeft: "10px",
+                      paddingRight: "10px",
+                      paddingTop: "10px",
+                      borderRadius: "8px",
+                    }} /><p style={{ color: "black" }} >Video Call</p>
                   </center>
                 </div>
                 <div className="columnIcon">
                   <center>
-                    <img src="certi.png" style={{ width: "100%" }} /><p style={{ color: "black" }} > Certificate</p>
+                    <img src="certi.png" style={{
+                      width: "100%",
+                      paddingBottom: "8px",
+                      boxShadow: "0px 0pc 10px",
+                      paddingLeft: "10px",
+                      paddingRight: "10px",
+                      paddingTop: "10px",
+                      borderRadius: "8px",
+                    }} /><p style={{ color: "black" }} > Certificate</p>
                   </center>
                 </div>
                 <div className="columnIcon">
                   <center>
-                    <img src="pay.png" style={{ width: "100%" }} /><p style={{ color: "black" }} > Payment to Institution</p>
+                    <img src="pay.png" style={{
+                      width: "100%",
+                      paddingBottom: "8px",
+                      boxShadow: "0px 0pc 10px",
+                      paddingLeft: "10px",
+                      paddingRight: "10px",
+                      paddingTop: "10px",
+                      borderRadius: "8px",
+                    }} />
+                    <p style={{ color: "black" }} > Payment to Institution</p>
                   </center>
                 </div>
               </div>
               <div className="rowIcon">
                 <div className="columnIcon">
                   <center>
-                    <img src="report.png" style={{ width: "100%" }} />
+                    <img src="report.png" style={{
+                      width: "100%",
+                      paddingBottom: "8px",
+                      boxShadow: "0px 0pc 10px",
+                      paddingLeft: "10px",
+                      paddingRight: "10px",
+                      paddingTop: "10px",
+                      borderRadius: "8px",
+                    }} />
+                    <p style={{ color: "black" }} > Reports</p>
+                  </center>
+                </div>
+                <div className="columnIcon">
+                  <center>
+                    <img src="events.png" style={{
+                      width: "100%",
+                      paddingBottom: "8px",
+                      boxShadow: "0px 0pc 10px",
+                      paddingLeft: "10px",
+                      paddingRight: "10px",
+                      paddingTop: "10px",
+                      borderRadius: "8px",
+                    }} />
                     <p style={{ color: "black" }} > Events</p>
                   </center>
                 </div>
                 <div className="columnIcon">
                   <center>
-                    <img src="events.png" style={{ width: "100%" }} />
-                    <p style={{ color: "black" }} > Events</p>
-                  </center>
-                </div>
-                <div className="columnIcon">
-                  <center>
-                    <img src="greet.png" style={{ width: "100%" }} />
+                    <img src="greet.png" style={{
+                      width: "100%",
+                      paddingBottom: "8px",
+                      boxShadow: "0px 0pc 10px",
+                      paddingLeft: "10px",
+                      paddingRight: "10px",
+                      paddingTop: "10px",
+                      borderRadius: "8px",
+                    }} />
                     <p style={{ color: "black" }} > Meet and greet</p>
                   </center>
                 </div>
                 <div className="columnIcon">
                   <center>
-                    <img src="recentn.png" style={{ width: "100%" }} />
+                    <img src="recentn.png" style={{
+                      width: "100%",
+                      paddingBottom: "8px",
+                      boxShadow: "0px 0pc 10px",
+                      paddingLeft: "10px",
+                      paddingRight: "10px",
+                      paddingTop: "10px",
+                      borderRadius: "8px",
+                    }} />
                     <p style={{ color: "black" }} > Recent</p>
                   </center>
                 </div>

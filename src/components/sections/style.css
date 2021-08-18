@@ -23,6 +23,7 @@
 .iconBg{
   background: rgba(0, 151, 19, 0.1);
  border-radius: 20px;
+
 }
 /* Clearfix (clear floats) */
 .rowIcon::after {
@@ -30,8 +31,16 @@
   clear: both;
   display: table;
   padding: 6px;
-}
 
+}
+.iconPic img{
+  width: 100%;
+  box-shadow: 0px 0pc 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  border-radius: 8px;
+}
 
 .whatwedo-video {
   margin: auto;
@@ -636,10 +645,10 @@ p {
 
   .columnIcon {
     float: left;
-    width: 100%;
-    padding-top: 75px;
-    padding-left: 75px;
-    padding-right: 75px;
+    width: 50%;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   
   /* Clearfix (clear floats) */
