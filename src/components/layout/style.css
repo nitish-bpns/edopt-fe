@@ -8,6 +8,16 @@
   display: table;
   clear: both;
 } */
+/* .navHover:hover{
+color: rgb(85, 255, 0);
+background-color: brown;
+} */
+.btnHover{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #f1f1f1;
+}
+
 
 .row {
   display: flex;

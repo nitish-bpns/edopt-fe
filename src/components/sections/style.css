@@ -20,6 +20,10 @@
   padding-right: 75px;
 }
 
+.iconBg{
+  background: rgba(0, 151, 19, 0.1);
+ border-radius: 20px;
+}
 /* Clearfix (clear floats) */
 .rowIcon::after {
   content: "";

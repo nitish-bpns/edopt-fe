@@ -471,6 +471,7 @@ const Header = ({
                             style={{
                               backgroundColor: "#3a936c",
                               borderRadius: "5px",
+
                             }}
                           >
                             For Student

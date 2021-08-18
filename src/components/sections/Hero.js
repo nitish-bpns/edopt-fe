@@ -478,7 +478,7 @@ const Hero = ({
                     <video
                       id="whatwedo-video"
                       style={{ marginTop: "0px", marginRight: "0px", marginLeft: "10px" }}
-
+                      poster={require("./../../assets/images/homevid.png")}
                       width="100%"
                       controls
                       preload="none"
@@ -498,55 +498,56 @@ const Hero = ({
 
             <br />
             <br />
-            <div className="rowIcon">
-              <div className="columnIcon">
-                <center>
-                  <img src="money.png" style={{ width: "100%" }} />Money
-                </center>
+            <div className="iconBg">
+              <div className="rowIcon">
+                <div className="columnIcon">
+                  <center>
+                    <img src="money.png" style={{ width: "100%" }} /><p style={{ color: "black" }} >Money</p>
+                  </center>
+                </div>
+                <div className="columnIcon">
+                  <center>
+                    <img src="videocall.png" style={{ width: "100%" }} /><p style={{ color: "black" }} >Video Call</p>
+                  </center>
+                </div>
+                <div className="columnIcon">
+                  <center>
+                    <img src="certi.png" style={{ width: "100%" }} /><p style={{ color: "black" }} > Certificate</p>
+                  </center>
+                </div>
+                <div className="columnIcon">
+                  <center>
+                    <img src="pay.png" style={{ width: "100%" }} /><p style={{ color: "black" }} > Payment to Institution</p>
+                  </center>
+                </div>
               </div>
-              <div className="columnIcon">
-                <center>
-                  <img src="videocall.png" style={{ width: "100%" }} />Video Call
-                </center>
-              </div>
-              <div className="columnIcon">
-                <center>
-                  <img src="certi.jpg" style={{ width: "100%" }} />Certificate
-                </center>
-              </div>
-              <div className="columnIcon">
-                <center>
-                  <img src="pay.png" style={{ width: "100%" }} />Payment to Institution
-                </center>
+              <div className="rowIcon">
+                <div className="columnIcon">
+                  <center>
+                    <img src="report.png" style={{ width: "100%" }} />
+                    <p style={{ color: "black" }} > Events</p>
+                  </center>
+                </div>
+                <div className="columnIcon">
+                  <center>
+                    <img src="events.png" style={{ width: "100%" }} />
+                    <p style={{ color: "black" }} > Events</p>
+                  </center>
+                </div>
+                <div className="columnIcon">
+                  <center>
+                    <img src="greet.png" style={{ width: "100%" }} />
+                    <p style={{ color: "black" }} > Meet and greet</p>
+                  </center>
+                </div>
+                <div className="columnIcon">
+                  <center>
+                    <img src="recentn.png" style={{ width: "100%" }} />
+                    <p style={{ color: "black" }} > Recent</p>
+                  </center>
+                </div>
               </div>
             </div>
-            <div className="rowIcon">
-              <div className="columnIcon">
-                <center>
-                  <img src="report.png" style={{ width: "100%" }} />
-                  Reports
-                </center>
-              </div>
-              <div className="columnIcon">
-                <center>
-                  <img src="events.png" style={{ width: "100%" }} />
-                  Events
-                </center>
-              </div>
-              <div className="columnIcon">
-                <center>
-                  <img src="greet.png" style={{ width: "100%" }} />
-                  Meet and Greet
-                </center>
-              </div>
-              <div className="columnIcon">
-                <center>
-                  <img src="recent.png" style={{ width: "100%" }} />
-                  Recent
-                </center>
-              </div>
-            </div>
-
             {/* <div>
               <card>
                 <row style={{ width: "100%", height: "100px" }}>
