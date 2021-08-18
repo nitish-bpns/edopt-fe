@@ -226,24 +226,25 @@ const Hero = ({
                     </p>
                   </div>
                   <left>
-                    <div className="reveal-from-bottom" data-reveal-delay="600">
-                      <ButtonGroup>
+                    {/* <div className="reveal-from-bottom" data-reveal-delay="600"> */}
+                    {/* <ButtonGroup> */}
 
-                        <Button
-                          tag="a"
-                          color="primary"
-                          wideMobile
-                          href="/myfeeds"
-                          style={{
-                            backgroundColor: "#3a936c",
-                            borderRadius: "5px",
+                    <a
+                      //tag="a"
+                      //color="primary"
+                      //wideMobile
+                      className="btn-hover"
+                      href="/myfeeds"
+                    /* style={{
+                          backgroundColor: "#3a936c",
+                          borderRadius: "5px",
+                        }} */
+                    >
+                      edopt now!
+                    </a>
 
-                          }}
-                        >
-                          edopt now!
-                        </Button>
-                      </ButtonGroup>
-                    </div>
+                    {/* </ButtonGroup> */}
+                    {/* </div> */}
                   </left>
                 </div>
               </div>
@@ -301,7 +302,7 @@ const Hero = ({
                       <br />
                       Location: Delhi<br />
                       Age: 6 years<br />
-                      Teacher
+                      Gyan Ganga Montessori & Model School
                       <br className="remove-in-mobile" />
                       <br className="remove-in-mobile" />
                       <center>
@@ -352,7 +353,7 @@ const Hero = ({
                       <br />
                       Location: Karnal<br />
                       Age: 15 years<br />
-                      Teacher
+                      Gyan Ganga Montessori & Model School
                       <br className="remove-in-mobile" />
                       <br className="remove-in-mobile" />
                       <center>
@@ -405,7 +406,7 @@ const Hero = ({
                       <br />
                       Location: Sonipat<br />
                       Age: 15 years<br />
-                      Engineer
+                      Holy Child Senior Secondary School
                       <br className="remove-in-mobile" />
                       <br className="remove-in-mobile" />
                       <center>

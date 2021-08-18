@@ -12,22 +12,22 @@ function closeForm() {
   document.getElementById("fix-btn").style.display = "block";
 }
 
-// function SubForm() {
-//   $.ajax({
-//     url: 'https://docs.google.com/spreadsheets/d/1ZS_5PY4TFpZoh1-xN1rgz8Jp2JLbfRsQoOBEBSxAKQ8/edit?usp=sharing',
-//     type: 'post',
-//     data: $("#myForm").serializeArray(),
-//     success: function () {
-//       alert("Form Data Submitted :)")
-//     },
-//     error: function () {
-//       alert("There was an error :(")
-//     }
-//   });
-// }
+function openImage() {
+  document.getElementsByClassName("prsnl-photo-popup")[0].style.display =
+    "block";
+  document.getElementById("img-popup").style.display = "block";
+  document.getElementById("blur").style.filter = "blur(4px)";
+  // document.getElementById("fix-btn").style.display = "none";
+}
+function closeImage() {
+  document.getElementsByClassName("prsnl-photo-popup")[0].style.display =
+    "none";
+  document.getElementById("img-popup").style.display = "none";
+  document.getElementById("blur").style.filter = "blur(0px)";
+  //document.getElementById("fix-btn").style.display = "block";
+}
 
-
-export default function diya() {
+export default function sakshi() {
   return (
     <div
       style={{
@@ -42,13 +42,14 @@ export default function diya() {
           <video
             id="stu-video"
             style={{ margin: "auto" }}
-            poster={require("./../../assets/images/diya-img.jpg")}
+            poster={require("./../../assets/images/sakshi-img.jpg")}
             width="45%"
+            autoPlay
             controls
             preload="none"
           >
             <source
-              src={require("./../../assets/images/diya-vid.mp4")}
+              src={require("./../../assets/images/sakshi-vid.mp4")}
               type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -67,9 +68,10 @@ export default function diya() {
               fontWeight: "500",
             }}
           >
-            I am Diya. I am a student of class 11th. I want to pursue
-            Non-medical. I love dancing. I am very bright in studies and very
-            much interested in studies. My father runs a small business.
+            I am Sakshi. I am a student of class 1st. I want to become a
+            teacher. l love dancing but my father lost his work due to COVID and
+            I have to hold my studies. Now he is working as a salesman in the
+            Sadar market of Delhi and earns only INR 7000.
           </p>
           <p
             style={{
@@ -77,13 +79,14 @@ export default function diya() {
               fontWeight: "500",
             }}
           >
-            COVID-19 makes our life miserable as one of our family member got
-            infected to COVID and later to black fungus. Our family suffered
-            alot in this phase. This phase makes us financially weak that we
-            can't able to pay our educational expenses. This is tough time for
-            us, so i request you to please support us financially in this phase.
-            I want to do engineering and achieve my goals. I will be grateful to
-            the one who supports me incessantly.
+            I hereby bring your notice that from the previous job of my father,
+            he earns decent amount but due this COVID he lost his job and have
+            to work at a diminutive amount to make ends meet. Unfortunately,
+            this costs my education. I want to become a teacher in future and
+            prove myself and This not possible without the proper guidance and
+            financial assistance. I am very sure about my efforts to achieve my
+            dream and I will be very thankful to the one who help me in my tough
+            times to continue my studies and achieve my goal.
           </p>
         </div>
         <div className="detail" style={{ width: "90%", margin: "auto" }}>
@@ -95,10 +98,11 @@ export default function diya() {
             }}
           >
             <ul>
-              <li>Name: Diya</li>
-              <li>Location: Sonipat</li>
-              <li>Age: 15</li>
-              <li>Engineering</li>
+              <li>Name: Sakshi Sharma</li>
+              <li>Location: Delhi</li>
+              <li>School: Vidyadeep Public School</li>
+              <li>Age: 6</li>
+              <li>Doctor</li>
             </ul>
           </p>
         </div>
@@ -111,9 +115,19 @@ export default function diya() {
             }}
           >
             <ul>
-              <li>93% in informatic Tech</li>
+              <li>98.6% in first class</li>
+              <li>Class Topper</li>
             </ul>
           </p>
+        </div>
+        <div className="certificate" style={{ width: "90%", margin: "auto" }}>
+          <h3>Certificates</h3>
+          <img
+            src={require("./../../assets/images/sakshi-mark.jpg")}
+            alt=""
+            onClick={openImage}
+            className="prsnl-photo"
+          />
         </div>
         <div className="amount" style={{ width: "90%", margin: "auto" }}>
           <h3>Amount</h3>
@@ -124,13 +138,24 @@ export default function diya() {
               fontWeight: "500",
             }}
           >
-            ₹90,000/Year
+            ₹50,000/Year
           </p>
         </div>
         <br />
         <br />
       </div>
       <div>
+        {/* image popup */}
+        <div id="img-popup">
+          <img
+            src={require("./../../assets/images/sakshi-mark.jpg")}
+            alt=""
+            onClick={closeImage}
+            className="prsnl-photo-popup"
+          />
+        </div>
+        {/* image popup */}
+
         {/* form */}
         <div class="contactPopup">
           <div class="formPopup" id="popupForm">

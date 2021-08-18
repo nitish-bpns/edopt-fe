@@ -77,24 +77,26 @@ export default function myfeeds() {
               src={require("./../../assets/images/sakshi-img.jpg")}
               alt=""
               className="photo"
-              style={{ height: "140px" }}
+            /* style={{ height: "140px" }} */
             />
           </div>
           <div className="student-details">
             <p className="stud-name">Sakshi</p>
             <p className="stud-age">Age: 6</p>
             <p className="stud-location">Delhi</p>
-            <p className="stud-goal">Teacher</p>
+            <p className="stud-goal">Delhi Vidyadeep Public School </p>
           </div>
-          <Button
-            tag="a"
-            color="primary"
-            href="/sakshi"
-            className="edoptbtn"
-            style={{ backgroundColor: "#4b5c6b", borderRadius: "5px" }}
-          >
-            eDOPT
-          </Button>
+          <center>
+            <a
+              /* tag="a"
+              color="primary" */
+              href="/sakshi"
+              className="edoptbtn"
+              style={{ backgroundColor: "#4b5c6b", borderRadius: "5px" }}
+            >
+              eDOPT
+            </a>
+          </center>
         </div>
         <div className="myCard">
           <div className="student-img">
@@ -102,24 +104,26 @@ export default function myfeeds() {
               src={require("./../../assets/images/jatin-img.jpg")}
               alt=""
               className="photo"
-              style={{ height: "140px" }}
+            /* style={{ height: "140px" }} */
             />
           </div>
           <div className="student-details">
             <p className="stud-name">Jatin</p>
             <p className="stud-age">Age: 15</p>
             <p className="stud-location">Karnal</p>
-            <p className="stud-goal">Engineer</p>
+            <p className="stud-goal">Gyan Ganga Montessori & Model School</p>
           </div>
-          <Button
-            tag="a"
-            color="primary"
-            href="/jatin"
-            className="edoptbtn"
-            style={{ backgroundColor: "#4b5c6b", borderRadius: "5px" }}
-          >
-            eDOPT
-          </Button>
+          <center>
+            <a
+              /* tag="a"
+              color="primary" */
+              href="/jatin"
+              className="edoptbtn"
+              style={{ backgroundColor: "#4b5c6b", borderRadius: "5px" }}
+            >
+              eDOPT
+            </a>
+          </center>
         </div>
         <div className="myCard">
           <div className="student-img">
@@ -127,24 +131,30 @@ export default function myfeeds() {
               src={require("./../../assets/images/diya-img.jpg")}
               alt=""
               className="photo"
-              style={{ height: "140px" }}
+            /* style={{ height: "140px" }} */
             />
           </div>
           <div className="student-details">
             <p className="stud-name">Diya</p>
             <p className="stud-age">Age: 15</p>
             <p className="stud-location">Sonipat</p>
-            <p className="stud-goal">Engineer</p>
+            <p className="stud-goal">Holy Child Senior Secondary School</p>
           </div>
-          <Button
-            tag="a"
-            color="primary"
-            href="/diya"
-            className="edoptbtn"
-            style={{ backgroundColor: "#4b5c6b", borderRadius: "5px" }}
-          >
-            eDOPT
-          </Button>
+          <div>
+            <center>
+
+
+              <a
+                /* tag="a"
+              color="primary" */
+                href="/diya"
+                className="edoptbtn"
+                style={{ backgroundColor: "#4b5c6b", borderRadius: "5px" }}
+              >
+                eDOPT
+              </a>
+            </center>
+          </div>
         </div>
       </div>
       <br />

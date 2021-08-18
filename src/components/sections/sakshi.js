@@ -12,6 +12,21 @@ function closeForm() {
   document.getElementById("fix-btn").style.display = "block";
 }
 
+function openImage() {
+  document.getElementsByClassName("prsnl-photo-popup")[0].style.display =
+    "block";
+  document.getElementById("img-popup").style.display = "block";
+  document.getElementById("blur").style.filter = "blur(4px)";
+  // document.getElementById("fix-btn").style.display = "none";
+}
+function closeImage() {
+  document.getElementsByClassName("prsnl-photo-popup")[0].style.display =
+    "none";
+  document.getElementById("img-popup").style.display = "none";
+  document.getElementById("blur").style.filter = "blur(0px)";
+  //document.getElementById("fix-btn").style.display = "block";
+}
+
 export default function sakshi() {
   return (
     <div
@@ -29,6 +44,7 @@ export default function sakshi() {
             style={{ margin: "auto" }}
             poster={require("./../../assets/images/sakshi-img.jpg")}
             width="45%"
+            autoPlay
             controls
             preload="none"
           >
@@ -82,8 +98,9 @@ export default function sakshi() {
             }}
           >
             <ul>
-              <li>Name: Sakshi</li>
+              <li>Name: Sakshi Sharma</li>
               <li>Location: Delhi</li>
+              <li>School: Vidyadeep Public School</li>
               <li>Age: 6</li>
               <li>Doctor</li>
             </ul>
@@ -103,6 +120,15 @@ export default function sakshi() {
             </ul>
           </p>
         </div>
+        <div className="certificate" style={{ width: "90%", margin: "auto" }}>
+          <h3>Certificates</h3>
+          <img
+            src={require("./../../assets/images/sakshi-mark.jpg")}
+            alt=""
+            onClick={openImage}
+            className="prsnl-photo"
+          />
+        </div>
         <div className="amount" style={{ width: "90%", margin: "auto" }}>
           <h3>Amount</h3>
 
@@ -119,6 +145,17 @@ export default function sakshi() {
         <br />
       </div>
       <div>
+        {/* image popup */}
+        <div id="img-popup">
+          <img
+            src={require("./../../assets/images/sakshi-mark.jpg")}
+            alt=""
+            onClick={closeImage}
+            className="prsnl-photo-popup"
+          />
+        </div>
+        {/* image popup */}
+
         {/* form */}
         <div class="contactPopup">
           <div class="formPopup" id="popupForm">

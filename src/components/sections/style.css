@@ -1,11 +1,72 @@
-
-
-
 .bodyColor{
   background: linear-gradient(180deg, rgba(0, 151, 19, 0.1) 50%, rgba(0, 151, 19, 0) 54%), #FFFFFF;
   box-shadow: inset 0px 10px 10px -10px #617264;
   margin-top: 45px;
 }
+
+
+
+
+
+/* image popup start */
+
+#img-popup {
+  /* position: relative; */
+  text-align: center;
+  width: 100%;
+  display: none;
+  /* display: none; */
+  position: fixed;
+  left: 45%;
+  top: 3%;
+  transform: translate(-50%, 5%);
+  border: 1px solid #f1f1f1;
+  border-radius: 15px;
+  z-index: 9;
+  background-color: white;
+  height: 450px;
+  width: 540px;
+}
+
+.prsnl-photo-popup {
+  display: none;
+  position: fixed;
+  /*   left: 45%;
+  top: 7%;
+  transform: translate(-50%, 5%);
+  border: 1px solid #f1f1f1;
+  border-radius: 15px;
+  z-index: 9;
+  background-color: white;
+  height: 450px;
+  width: 540px;
+  backdrop-filter: blur(2px); */
+}
+
+/* image popup end */
+
+.do-icon {
+  width: 100%;
+}
+
+.prsnl-photo {
+  width: 180px;
+  height: 230px;
+}
+
+.btn-hover {
+  background-color: rgb(88 206 154 / 85%);
+  color: white;
+  border-radius: 5px;
+  padding: 11px 31px;
+}
+
+.btn-hover:hover {
+  background-color: rgb(58, 147, 108);
+  color: #ffffff;
+  /*  color: rgb(58, 147, 108); */
+}
+
 .stdCard {
   margin: 7px;
   
@@ -95,9 +156,10 @@
 }
 
 .student-img {
-  height: 150px;
+  height: 207px;
   margin-top: 10px;
 }
+
 
 .feed-content {
   width: 90%;
@@ -105,30 +167,33 @@
 }
 
 .myCard {
-  border: 1px solid black;
+  border: 0px solid black;
   display: inline-block;
   width: 25%;
   margin: 13px 50px;
   border-radius: 15px;
-  height: 380px;
+  height: 480px;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .edoptbtn {
-  margin-left: 88px;
-  margin-bottom: 10px;
+  /* margin-left: 95px; */
+  /* margin-bottom: 10px; */
+  padding: 6px 25px;
 }
 
 .photo {
   margin: auto;
-  width: 125px;
-  height: 150px;
+  width: 152px;
+  height: 175px;
 }
 
 .student-details {
   padding: 5px 46px;
+  margin-bottom: 10px;
 }
+
 
 /*feeds*/
 

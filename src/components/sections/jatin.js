@@ -12,6 +12,21 @@ function closeForm() {
   document.getElementById("fix-btn").style.display = "block";
 }
 
+function openImage() {
+  document.getElementsByClassName("prsnl-photo-popup")[0].style.display =
+    "block";
+  document.getElementById("img-popup").style.display = "block";
+  document.getElementById("blur").style.filter = "blur(4px)";
+  // document.getElementById("fix-btn").style.display = "none";
+}
+function closeImage() {
+  document.getElementsByClassName("prsnl-photo-popup")[0].style.display =
+    "none";
+  document.getElementById("img-popup").style.display = "none";
+  document.getElementById("blur").style.filter = "blur(0px)";
+  //document.getElementById("fix-btn").style.display = "block";
+}
+
 export default function jatin() {
   return (
     <div
@@ -29,6 +44,7 @@ export default function jatin() {
             style={{ margin: "auto" }}
             poster={require("./../../assets/images/jatin-img.jpg")}
             width="45%"
+            autoPlay
             controls
             preload="none"
           >
@@ -83,8 +99,9 @@ export default function jatin() {
             }}
           >
             <ul>
-              <li>Name: Jatin</li>
+              <li>Name: Jatin Arora</li>
               <li>Location: Karnal</li>
+              <li>School: Gyan Ganga Montessori & Model School</li>
               <li>Age: 15</li>
               <li>Engineer</li>
             </ul>
@@ -104,6 +121,15 @@ export default function jatin() {
             </ul>
           </p>
         </div>
+        <div className="certificate" style={{ width: "90%", margin: "auto" }}>
+          <h3>Certificates</h3>
+          <img
+            src={require("./../../assets/images/jatin-mark.jpg")}
+            alt=""
+            onClick={openImage}
+            className="prsnl-photo"
+          />
+        </div>
         <div className="amount" style={{ width: "90%", margin: "auto" }}>
           <h3>Amount</h3>
 
@@ -120,6 +146,17 @@ export default function jatin() {
         <br />
       </div>
       <div>
+        {/* image popup */}
+        <div id="img-popup">
+          <img
+            src={require("./../../assets/images/jatin-mark.jpg")}
+            alt=""
+            onClick={closeImage}
+            className="prsnl-photo-popup"
+          />
+        </div>
+        {/* image popup */}
+
         {/* form */}
         <div class="contactPopup">
           <div class="formPopup" id="popupForm">

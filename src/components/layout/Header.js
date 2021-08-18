@@ -490,7 +490,7 @@ const Header = ({
                             eDOPT a Child
                           </Link>
                         </li> */}
-                        <li>
+                        {/* <li>
                           <Link
                             to="/Login_Donor"
                             className="button button-primary button-wide-mobile button-sm"
@@ -504,7 +504,7 @@ const Header = ({
                           >
                             Login/Signup
                           </Link>
-                        </li>
+                        </li> */}
 
                       </ul>
                     )}
