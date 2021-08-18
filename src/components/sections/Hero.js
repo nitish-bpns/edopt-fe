@@ -302,7 +302,7 @@ const Hero = ({
                       <br />
                       Location: Delhi<br />
                       Age: 6 years<br />
-                      Gyan Ganga Montessori & Model School
+                      Delhi Vidyadeep Public School
                       <br className="remove-in-mobile" />
                       <br className="remove-in-mobile" />
                       <center>
@@ -498,6 +498,10 @@ const Hero = ({
             </center>
 
             <br />
+            <br />
+            <div style={{ textAlign: "Center", fontSize: "30px", color: "black" }}>
+              <b >Our utilities</b>
+            </div>
             <br />
             <div className="iconBg">
               <div className="rowIcon">

@@ -84,7 +84,7 @@ export default function myfeeds() {
             <p className="stud-name">Sakshi</p>
             <p className="stud-age">Age: 6</p>
             <p className="stud-location">Delhi</p>
-            <p className="stud-goal">Delhi Vidyadeep Public School </p>
+            <p className="stud-goal">Delhi Vidyadeep<br /> Public School </p>
           </div>
           <center>
             <a
@@ -111,7 +111,7 @@ export default function myfeeds() {
             <p className="stud-name">Jatin</p>
             <p className="stud-age">Age: 15</p>
             <p className="stud-location">Karnal</p>
-            <p className="stud-goal">Gyan Ganga Montessori & Model School</p>
+            <p className="stud-goal">Gyan Ganga<br /> Montessori School</p>
           </div>
           <center>
             <a
@@ -138,7 +138,7 @@ export default function myfeeds() {
             <p className="stud-name">Diya</p>
             <p className="stud-age">Age: 15</p>
             <p className="stud-location">Sonipat</p>
-            <p className="stud-goal">Holy Child Senior Secondary School</p>
+            <p className="stud-goal">Holy Child Senior <br />Secondary School</p>
           </div>
           <div>
             <center>
