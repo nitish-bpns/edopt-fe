@@ -510,7 +510,7 @@ const Hero = ({
                       paddingRight: "10px",
                       paddingTop: "10px",
                       borderRadius: "8px",
-                    }} /><p style={{ color: "black" }} >Money</p>
+                    }} /><p style={{ color: "black", fontWeight: "inherit" }} >Money</p>
                   </center>
                 </div>
                 <div className="columnIcon">
@@ -523,7 +523,7 @@ const Hero = ({
                       paddingRight: "10px",
                       paddingTop: "10px",
                       borderRadius: "8px",
-                    }} /><p style={{ color: "black" }} >Video Call</p>
+                    }} /><p style={{ color: "black", fontWeight: "inherit" }} >Video Call</p>
                   </center>
                 </div>
                 <div className="columnIcon">
@@ -536,7 +536,7 @@ const Hero = ({
                       paddingRight: "10px",
                       paddingTop: "10px",
                       borderRadius: "8px",
-                    }} /><p style={{ color: "black" }} > Certificate</p>
+                    }} /><p style={{ color: "black", fontWeight: "inherit" }} > Certificate</p>
                   </center>
                 </div>
                 <div className="columnIcon">
@@ -550,7 +550,7 @@ const Hero = ({
                       paddingTop: "10px",
                       borderRadius: "8px",
                     }} />
-                    <p style={{ color: "black" }} > Payment to Institution</p>
+                    <p style={{ color: "black", fontWeight: "inherit" }} > Payment to Institution</p>
                   </center>
                 </div>
               </div>
@@ -566,7 +566,7 @@ const Hero = ({
                       paddingTop: "10px",
                       borderRadius: "8px",
                     }} />
-                    <p style={{ color: "black" }} > Reports</p>
+                    <p style={{ color: "black", fontWeight: "inherit" }} > Reports</p>
                   </center>
                 </div>
                 <div className="columnIcon">
@@ -580,7 +580,7 @@ const Hero = ({
                       paddingTop: "10px",
                       borderRadius: "8px",
                     }} />
-                    <p style={{ color: "black" }} > Events</p>
+                    <p style={{ color: "black", fontWeight: "inherit" }} > Events</p>
                   </center>
                 </div>
                 <div className="columnIcon">
@@ -594,7 +594,7 @@ const Hero = ({
                       paddingTop: "10px",
                       borderRadius: "8px",
                     }} />
-                    <p style={{ color: "black" }} > Meet and greet</p>
+                    <p style={{ color: "black", fontWeight: "inherit" }} > Meet and greet</p>
                   </center>
                 </div>
                 <div className="columnIcon">
@@ -607,8 +607,9 @@ const Hero = ({
                       paddingRight: "10px",
                       paddingTop: "10px",
                       borderRadius: "8px",
+                      fontWeight: "normal"
                     }} />
-                    <p style={{ color: "black" }} > Recent</p>
+                    <p style={{ color: "black", fontWeight: "inherit" }} > Recent</p>
                   </center>
                 </div>
               </div>
