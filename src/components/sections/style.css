@@ -1,12 +1,31 @@
-.bodyColor{
-  background: linear-gradient(180deg, rgba(0, 151, 19, 0.1) 50%, rgba(0, 151, 19, 0) 54%), #FFFFFF;
+.bodyColor {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 151, 19, 0.1) 50%,
+      rgba(0, 151, 19, 0) 54%
+    ),
+    #ffffff;
   box-shadow: inset 0px 10px 10px -10px #617264;
   margin-top: 45px;
 }
 
-
-
-
+/* .form-sub {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  display: none;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, 5%);
+  border: 1px solid #f1f1f1;
+  border-radius: 15px;
+  z-index: 9;
+  background-color: #e0ffcf;
+  height: 211px;
+  width: 540px;
+} */
 
 /* image popup start */
 
@@ -69,7 +88,6 @@
 
 .stdCard {
   margin: 7px;
-  
 }
 
 /*icon*/
@@ -81,10 +99,9 @@
   padding-right: 75px;
 }
 
-.iconBg{
+.iconBg {
   background: rgba(0, 151, 19, 0.1);
- border-radius: 20px;
-
+  border-radius: 20px;
 }
 /* Clearfix (clear floats) */
 .rowIcon::after {
@@ -92,9 +109,8 @@
   clear: both;
   display: table;
   padding: 6px;
-
 }
-.iconPic img{
+.iconPic img {
   width: 100%;
   box-shadow: 0px 0pc 10px;
   padding-left: 10px;
@@ -112,14 +128,13 @@
   margin-left: 0px;
 }
 
-.videoCard{
+.videoCard {
   box-shadow: 0px 0px 5px #617264;
   background-color: "";
   margin: 0%;
- height: 650px;
+  height: 650px;
   border-radius: 15px;
 }
-
 
 /*Sorting in feeds*/
 
@@ -160,7 +175,6 @@
   margin-top: 10px;
 }
 
-
 .feed-content {
   width: 90%;
   margin: auto;
@@ -193,7 +207,6 @@
   padding: 5px 46px;
   margin-bottom: 10px;
 }
-
 
 /*feeds*/
 
@@ -292,7 +305,6 @@
 
 /* form */
 
-
 .celebrity {
   display: block;
 }
@@ -366,7 +378,6 @@
   margin-left: 57px;
 }
 
-
 #stu-video {
   height: 300px;
 }
@@ -390,9 +401,6 @@
   font-size: 29px;
   padding-top: 7px;
 }
-
-
-
 
 /*mobile video start*/
 
@@ -612,7 +620,6 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-
   .columnIcon {
     float: left;
     width: 50%;
@@ -620,7 +627,7 @@ p {
     padding-left: 75px;
     padding-right: 75px;
   }
-  
+
   /* Clearfix (clear floats) */
   .rowIcon::after {
     content: "";
@@ -628,25 +635,23 @@ p {
     display: table;
     padding: 6px;
   }
-  
+
   .whatwedo-video {
     margin: auto;
     width: -webkit-fill-available;
-   
+
     margin-top: 0px;
     margin-right: 0px;
     margin-left: 0px;
   }
 
-  .videoCard{
+  .videoCard {
     box-shadow: 0px 0px 5px #617264;
     background-color: "";
     margin: 0%;
-   
+
     border-radius: 15px;
   }
-
-
 
   .column {
     float: left;
@@ -679,8 +684,6 @@ p {
 }
 
 @media screen and (max-width: 464px) {
-
-
   #fix-btn {
     position: fixed;
     bottom: 0px;
@@ -694,17 +697,17 @@ p {
   .whatwedo-video {
     margin: auto;
     width: -webkit-fill-available;
-   
+
     margin-top: 0px;
     margin-right: 0px;
     margin-left: 0px;
   }
 
-  .videoCard{
+  .videoCard {
     box-shadow: 0px 0px 5px #617264;
     background-color: "";
     margin: 0%;
-   
+
     border-radius: 15px;
   }
 
@@ -715,7 +718,7 @@ p {
     padding-left: 30px;
     padding-right: 30px;
   }
-  
+
   /* Clearfix (clear floats) */
   .rowIcon::after {
     content: "";
@@ -723,9 +726,6 @@ p {
     display: table;
     padding: 6px;
   }
-  
-
-
 
   /*popup form*/
 
@@ -787,106 +787,100 @@ p {
   }
 }
 
+.reveal-from-bottom {
+  width: 40%;
+  margin: auto;
+}
+.remove-in-mobile {
+  display: none;
+}
+.main-container {
+  width: 80%;
+}
+.profile-img {
+  display: block;
+  width: 100%;
+}
+.details {
+  display: block;
+  width: 100%;
+}
+.main-container {
+  width: 80%;
+}
+.schedule-meet-btn {
+  width: 84%;
+}
 
+.mobile-body {
+  height: 287px;
+  border-radius: 14px;
+}
+.mobile-header {
+  height: 25px;
+}
+.mobile-footer {
+  height: 25px;
+}
 
+.steps-video {
+  width: 42%;
+}
 
+.web-footer {
+  height: 195px;
+}
 
+.step-img {
+  height: 290px;
+}
+.mobile-body .mobile-screen {
+  height: 200px;
+}
+.feed-student {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mobile-body .mobile-header {
+  height: 20px;
+}
+.mobile-body .mobile-footer {
+  height: 18px;
+}
+.celebrity {
+  width: 100%;
+}
+.header-camera {
+  border: 2px solid black;
+  display: inline-block;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 9px;
+  margin-bottom: 8px;
+  background-color: #ccc;
+}
 
-  .reveal-from-bottom {
-    width: 40%;
-    margin: auto;
-  }
-  .remove-in-mobile {
-    display: none;
-  }
-  .main-container {
-    width: 80%;
-  }
-  .profile-img {
-    display: block;
-    width: 100%;
-  }
-  .details {
-    display: block;
-    width: 100%;
-  }
-  .main-container {
-    width: 80%;
-  }
-  .schedule-meet-btn {
-    width: 84%;
-  }
+.cardGradient {
+  background: rgb(89, 171, 99);
+  background: radial-gradient(
+    circle,
+    rgba(89, 171, 99, 0.7741138059701492) 70%,
+    rgba(15, 101, 35, 1) 100%
+  );
+}
 
-  .mobile-body {
-    height: 287px;
-    border-radius: 14px;
-  }
-  .mobile-header {
-    height: 25px;
-  }
-  .mobile-footer {
-    height: 25px;
-  }
-
-  .steps-video {
-    width: 42%;
-  }
-
-  .web-footer {
-    height: 195px;
-  }
-
-  .step-img {
-    height: 290px;
-  }
-  .mobile-body .mobile-screen {
-    height: 200px;
-  }
-  .feed-student {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .mobile-body .mobile-header {
-    height: 20px;
-  }
-  .mobile-body .mobile-footer {
-    height: 18px;
-  }
-  .celebrity {
-    width: 100%;
-  }
-  .header-camera {
-    border: 2px solid black;
-    display: inline-block;
-    height: 9px;
-    width: 9px;
-    border-radius: 50%;
-    margin-left: 5px;
-    margin-right: 9px;
-    margin-bottom: 8px;
-    background-color: #ccc;
-
-  }
-
-  .cardGradient{
-    background: rgb(89,171,99);
-    background: radial-gradient(circle, rgba(89,171,99,0.7741138059701492) 70%, rgba(15,101,35,1) 100%);
-  }
-
-
-  .header-div {
-    border-radius: 15px;
-    width: 47px;
-    border: 2px solid black;
-    /* margin-top: auto; */
-    margin-bottom: 10px;
-    height: 4px;
-    justify-content: center;
-    background-color: black;
-    /* margin: auto; */
-    display: inline-block;
-    border-radius: 28;
-  }
-
-
-
+.header-div {
+  border-radius: 15px;
+  width: 47px;
+  border: 2px solid black;
+  /* margin-top: auto; */
+  margin-bottom: 10px;
+  height: 4px;
+  justify-content: center;
+  background-color: black;
+  /* margin: auto; */
+  display: inline-block;
+  border-radius: 28;
+}

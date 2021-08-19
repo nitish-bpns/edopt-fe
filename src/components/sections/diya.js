@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+//import "./styles.css";
 var FontAwesome = require("react-fontawesome");
 
 function openForm() {
@@ -27,21 +28,42 @@ function closeImage() {
   //document.getElementById("fix-btn").style.display = "block";
 }
 
-// function SubForm() {
-//   $.ajax({
-//     url: 'https://docs.google.com/spreadsheets/d/1ZS_5PY4TFpZoh1-xN1rgz8Jp2JLbfRsQoOBEBSxAKQ8/edit?usp=sharing',
-//     type: 'post',
-//     data: $("#myForm").serializeArray(),
-//     success: function () {
-//       alert("Form Data Submitted :)")
-//     },
-//     error: function () {
-//       alert("There was an error :(")
-//     }
-//   });
-// }
+export default function Contact() {
+  const [formData, setFormData] = useState({});
+  const [message, setMessage] = useState("");
 
-export default function diya() {
+  const handleInput = (e) => {
+    const copyFormData = { ...formData };
+    copyFormData[e.target.name] = e.target.value;
+    setFormData(copyFormData);
+  };
+
+  const sendData = async (e) => {
+    e.preventDefault();
+    try {
+      console.log(formData);
+      const response = await fetch(
+        "https://v1.nocodeapi.com/eedopt/google_sheets/EJbzyRDJOnoGsbzb?tabId=eDOPT",
+        {
+          method: "post",
+          body: JSON.stringify([
+            [formData.name, formData.email, formData.phone, formData.location],
+          ]),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const json = await response.json();
+      console.log("Success:", JSON.stringify(json));
+      setMessage("Success");
+      alert("Form Submitted Successfully");
+    } catch (error) {
+      console.error("Error:", error);
+      setMessage("Error");
+    }
+  };
+
   return (
     <div
       style={{
@@ -112,9 +134,9 @@ export default function diya() {
             <ul>
               <li>Name: Diya Gosain</li>
               <li>Location: Sonipat</li>
-              <li>School: Holy Child Senior Secondary School</li>
+
               <li>Age: 15</li>
-              <li>Engineering</li>
+              <li>School: Holy Child Senior Secondary School</li>
             </ul>
           </p>
         </div>
@@ -178,7 +200,7 @@ export default function diya() {
               onClick={closeForm}
             />
             <hr className="line" />
-            <form action="/action_page.php" class="formContainer">
+            <form className="formContainer input-form" onSubmit={sendData}>
               <div>
                 <input
                   type="text"
@@ -187,6 +209,7 @@ export default function diya() {
                   placeholder="Name"
                   name="name"
                   required
+                  onChange={handleInput}
                 />
                 <FontAwesome className="form-icon" name="user" />
               </div>
@@ -198,6 +221,7 @@ export default function diya() {
                   placeholder="Email"
                   name="email"
                   required
+                  onChange={handleInput}
                 />
                 <FontAwesome className="form-icon" name="envelope" />
               </div>
@@ -210,6 +234,7 @@ export default function diya() {
                   name="phone"
                   pattern="[0-9]{10}"
                   required
+                  onChange={handleInput}
                 />
                 <FontAwesome className="form-icon" name="phone" />
               </div>
@@ -221,12 +246,12 @@ export default function diya() {
                   placeholder="Location"
                   name="location"
                   required
+                  onChange={handleInput}
                 />
                 <FontAwesome className="form-icon" name="map-marker" />
               </div>
-              <button type="submit" class="btn">
-                Confirm
-              </button>
+              <input name="submit" className="btn" type="submit" value="Send" />
+              <div>{message}</div>
             </form>
           </div>
         </div>

@@ -1,23 +1,23 @@
-import React from 'react';
-import classNames from 'classnames';
-import { SectionSplitProps } from '../../utils/SectionProps';
-import SectionHeader from './partials/SectionHeader';
-import Image from '../elements/Image';
-import Input from '../elements/Input';
-import { Link } from 'react-router-dom';
-import './style.css'
+import React from "react";
+import classNames from "classnames";
+import { SectionSplitProps } from "../../utils/SectionProps";
+import SectionHeader from "./partials/SectionHeader";
+import Image from "../elements/Image";
+import Input from "../elements/Input";
+import { Link } from "react-router-dom";
+import "./style.css";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from "react";
 import axios from "../../api/axios";
 
 const propTypes = {
-  ...SectionSplitProps.types
-}
+  ...SectionSplitProps.types,
+};
 
 const defaultProps = {
-  ...SectionSplitProps.defaults
-}
+  ...SectionSplitProps.defaults,
+};
 
 const FeaturesSplit = ({
   className,
@@ -33,139 +33,91 @@ const FeaturesSplit = ({
   imageFill,
   ...props
 }) => {
-
   const outerClasses = classNames(
-    'features-split section',
-    topOuterDivider && 'has-top-divider',
-    bottomOuterDivider && 'has-bottom-divider',
-    hasBgColor && 'has-bg-color',
-    invertColor && 'invert-color',
+    "features-split section",
+    topOuterDivider && "has-top-divider",
+    bottomOuterDivider && "has-bottom-divider",
+    hasBgColor && "has-bg-color",
+    invertColor && "invert-color",
     className
   );
 
   const innerClasses = classNames(
-    'features-split-inner section-inner',
-    topDivider && 'has-top-divider',
-    bottomDivider && 'has-bottom-divider'
+    "features-split-inner section-inner",
+    topDivider && "has-top-divider",
+    bottomDivider && "has-bottom-divider"
   );
 
   const splitClasses = classNames(
-    'split-wrap',
-    invertMobile && 'invert-mobile',
-    invertDesktop && 'invert-desktop',
-    alignTop && 'align-top'
+    "split-wrap",
+    invertMobile && "invert-mobile",
+    invertDesktop && "invert-desktop",
+    alignTop && "align-top"
   );
 
-
-
   const sectionHeader = {
-    title: '',
-    paragraph: '-'
+    title: "",
+    paragraph: "-",
   };
-  const [studentName, setStudentName] = useState('');
-  const [studentUserName, setStudentUserName] = useState('');
-  const [studentAge, setStudentAge] = useState('');
-  const [studentGender, setStudentGender] = useState('');
-  const [studentCity, setStudentCity] = useState('');
-  const [studentPincode, setStudentPincode] = useState('');
-  const [studentPhone, setStudentPhone] = useState('');
-  const [studentStandard, setStudentStandard] = useState('');
-  const [studentIntroduction, setStudentIntroduction] = useState('');
-  const [studentBody, setStudentBody] = useState('');
-  const [guardianName, setGuardianName] = useState('');
-  const [guardianAge, setGuardianAge] = useState('');
-  const [guardianGender, setGuardianGender] = useState('');
-  const [guardianPhone, setGuardianPhone] = useState('');
-  const [guardianRelation, setGuardianRelation] = useState('');
-  const [guardianAddress, setGuardianAddress] = useState('');
-  const [guardianWants, setGuardianWants] = useState('');
-  const [guardianNeeds, setGuardianNeeds] = useState('');
 
-  const signUpStudent = (e) => {
-    e.preventDefault()
-    //console.log("Hello")
-    axios.get('/chkusername', {
-      headers: {
-        'username': studentUserName
-      }
-    }).then((res) => {
-      if (res.data.status) {
+  const [formData, setFormData] = useState({});
+  const [message, setMessage] = useState("");
 
+  const handleInput = (e) => {
+    const copyFormData = { ...formData };
+    copyFormData[e.target.name] = e.target.value;
+    setFormData(copyFormData);
+  };
 
-        axios.post('/registerStudent', {
-          name: studentName,
-          email: studentUserName,
-          password: studentUserName,
-          age: studentAge,
-          gender: studentGender,
-          address: guardianAddress,
-          city: studentCity,
-          pin: studentPincode,
-          phone: studentPhone,
-          guardianName: guardianName,
-          guardianAge: guardianAge,
-          guardianGender: guardianGender,
-          guardianPhone: guardianPhone,
-          guardianRelation: guardianRelation,
-          grade: studentStandard,
-          intro: studentIntroduction,
-          body: studentBody,
-          aim: guardianNeeds,
-          requirements: guardianWants,
-        })
-          .then(function (response) {
-            console.log(response.data)
-            alert(response.data.message + "! Our executive will be reaching you soon for verification.")
-            setStudentName('')
-            setStudentUserName('')
-            setStudentAge('')
-            setStudentGender('')
-            setStudentCity('')
-            setStudentPincode('')
-            setStudentPhone('')
-            setStudentStandard('')
-            setStudentIntroduction('')
-            setStudentBody('')
-            setGuardianName('')
-            setGuardianAge('')
-            setGuardianGender('')
-            setGuardianPhone('')
-            setGuardianRelation('')
-            setGuardianAddress('')
-            setGuardianWants('')
-            setGuardianNeeds('')
-          }).catch(function (error) {
-            alert('something went wrong ! ')
-          })
-      }
-      else {
-        alert('username already exists')
-      }
-
-    }).catch((err) => {
-      alert('username already exists')
-    })
-  }
-
+  const sendData = async (e) => {
+    e.preventDefault();
+    try {
+      console.log(formData);
+      const response = await fetch(
+        "https://v1.nocodeapi.com/eedopt/google_sheets/EJbzyRDJOnoGsbzb?tabId=Student_signup",
+        {
+          method: "post",
+          body: JSON.stringify([
+            [
+              formData.name,
+              formData.Age,
+              formData.Class,
+              formData.School,
+              formData.Phone,
+              formData.Location,
+              formData.intro,
+            ],
+          ]),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const json = await response.json();
+      console.log("Success:", JSON.stringify(json));
+      setMessage("Success");
+      alert("Form Submitted Successfully. Our Team will Contact you soon");
+    } catch (error) {
+      console.error("Error:", error);
+      setMessage("Error");
+    }
+  };
 
   return (
-    <section
-      {...props}
-      className={outerClasses}
-    >
-      <form onSubmit={signUpStudent}>
+    <section {...props} className={outerClasses}>
+      <form onSubmit={sendData} id="blur">
         <div className="container">
           <div className={innerClasses}>
             <SectionHeader data={sectionHeader} className="center-content">
               <h2>Contact Us</h2>
             </SectionHeader>
 
-
             <div className={splitClasses}>
-
               <div className="split-item">
-                <div className="split-item-content center-content-mobile reveal-from-left"
-                  data-reveal-container=".split-item">
+                <div
+                  className="split-item-content center-content-mobile reveal-from-left"
+                  data-reveal-container=".split-item"
+                >
                   <p className="m-0">
                     {/* <p className="m-0">Your Information</p> */}
                     <div className="row" style={{ marginTop: "0%" }}>
@@ -229,51 +181,103 @@ const FeaturesSplit = ({
                       </div> */}
                     </div>
 
-                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Name"
-                      name="Your Name"
-
-                      style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
-                    </Input>
-
-                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Age"
-                      name="Your Age"
-
-                      style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
-                    </Input>
-
-                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Class"
-                      name="Class"
-
-                      style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
-                    </Input>
-
-
-                    <Input id="newsletter" type="name" hasIcon="right" placeholder="School Name"
-                      name="School Name"
-                      onChange={(e) => { setStudentPhone(e.target.value) }} value={studentPhone}
-                      style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
-                    </Input>
-                    <Input id="newsletter" type="number" hasIcon="right" placeholder="Phone no."
-                      name="Phone no."
-                      onChange={(e) => { setStudentPhone(e.target.value) }} value={studentPhone}
-                      style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
-                    </Input>
-                    <Input id="newsletter" type="text" hasIcon="right" placeholder="Location"
-                      onChange={(e) => { setStudentStandard(e.target.value) }} value={studentStandard}
-                      name="standard"
-                      style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
-                    </Input>
-                    <br />
-                    <br />
-                    <Input id="newsletter" type="name" hasIcon="right"
-                      onChange={(e) => { setStudentIntroduction(e.target.value) }} value={studentIntroduction}
-                      placeholder="Your Story (50 Words)" name="intro" style={{
+                    <Input
+                      id="newsletter"
+                      type="name"
+                      hasIcon="right"
+                      placeholder="Your Name"
+                      name="name"
+                      onChange={handleInput}
+                      style={{
                         marginTop: "4%",
                         borderRadius: "20px",
                         borderColor: "grey",
-                        height: "5rem"
-                      }}>
-                    </Input>
+                      }}
+                    ></Input>
+
+                    <Input
+                      id="newsletter"
+                      type="name"
+                      hasIcon="right"
+                      placeholder="Your Age"
+                      name="Age"
+                      onChange={handleInput}
+                      style={{
+                        marginTop: "4%",
+                        borderRadius: "20px",
+                        borderColor: "grey",
+                      }}
+                    ></Input>
+
+                    <Input
+                      id="newsletter"
+                      type="name"
+                      hasIcon="right"
+                      placeholder="Class"
+                      name="Class"
+                      onChange={handleInput}
+                      style={{
+                        marginTop: "4%",
+                        borderRadius: "20px",
+                        borderColor: "grey",
+                      }}
+                    ></Input>
+
+                    <Input
+                      id="newsletter"
+                      type="name"
+                      hasIcon="right"
+                      placeholder="School Name"
+                      name="School"
+                      onChange={handleInput}
+                      style={{
+                        marginTop: "4%",
+                        borderRadius: "20px",
+                        borderColor: "grey",
+                      }}
+                    ></Input>
+                    <Input
+                      id="newsletter"
+                      type="tel"
+                      hasIcon="right"
+                      placeholder="Phone no."
+                      name="Phone"
+                      onChange={handleInput}
+                      style={{
+                        marginTop: "4%",
+                        borderRadius: "20px",
+                        borderColor: "grey",
+                      }}
+                    ></Input>
+                    <Input
+                      id="newsletter"
+                      type="text"
+                      hasIcon="right"
+                      placeholder="Location"
+                      onChange={handleInput}
+                      name="Location"
+                      style={{
+                        marginTop: "4%",
+                        borderRadius: "20px",
+                        borderColor: "grey",
+                      }}
+                    ></Input>
+                    <br />
+                    <br />
+                    <Input
+                      id="newsletter"
+                      type="name"
+                      hasIcon="right"
+                      onChange={handleInput}
+                      placeholder="Your Story (50 Words)"
+                      name="intro"
+                      style={{
+                        marginTop: "4%",
+                        borderRadius: "20px",
+                        borderColor: "grey",
+                        height: "5rem",
+                      }}
+                    ></Input>
                     {/* <Input id="newsletter" type="name" hasIcon="right"
                       onChange={(e) => { setStudentBody(e.target.value) }} value={studentBody}
                       placeholder="Body (150 Words)" name="body" style={{
@@ -386,8 +390,14 @@ height={396} />
 </center>
 <br /> */}
               <center>
-                <button type="submit" className="button button-primary button-wide-mobile button-sm"
-                  style={{ backgroundColor: "#3a936c", borderRadius: "20px" }}>Contact Us</button>
+                <input
+                  name="submit"
+                  className="btn button button-primary button-wide-mobile button-sm"
+                  placeholder="Contact Us"
+                  style={{ backgroundColor: "#3a936c", borderRadius: "20px" }}
+                  type="submit"
+                  value="Send"
+                />
                 {/* <br /><br />Already have an account? <a href="/Login_Student">Login</a> */}
               </center>
             </div>
@@ -396,7 +406,7 @@ height={396} />
       </form>
     </section>
   );
-}
+};
 
 FeaturesSplit.propTypes = propTypes;
 FeaturesSplit.defaultProps = defaultProps;

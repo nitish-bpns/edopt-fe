@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+//import "./styles.css";
 var FontAwesome = require("react-fontawesome");
 
 function openForm() {
   document.getElementById("popupForm").style.display = "block";
   document.getElementById("blur").style.filter = "blur(4px)";
-  document.getElementById("fix-btn").style.display = "none";
+  /* document.getElementById("fix-btn").style.display = "none"; */
 }
 function closeForm() {
   document.getElementById("popupForm").style.display = "none";
   document.getElementById("blur").style.filter = "blur(0px)";
-  document.getElementById("fix-btn").style.display = "block";
+  /* document.getElementById("fix-btn").style.display = "block"; */
 }
 
 function openImage() {
@@ -27,7 +28,42 @@ function closeImage() {
   //document.getElementById("fix-btn").style.display = "block";
 }
 
-export default function sakshi() {
+export default function Contact() {
+  const [formData, setFormData] = useState({});
+  const [message, setMessage] = useState("");
+
+  const handleInput = (e) => {
+    const copyFormData = { ...formData };
+    copyFormData[e.target.name] = e.target.value;
+    setFormData(copyFormData);
+  };
+
+  const sendData = async (e) => {
+    e.preventDefault();
+    try {
+      console.log(formData);
+      const response = await fetch(
+        "https://v1.nocodeapi.com/eedopt/google_sheets/EJbzyRDJOnoGsbzb?tabId=eDOPT",
+        {
+          method: "post",
+          body: JSON.stringify([
+            [formData.name, formData.email, formData.phone, formData.location],
+          ]),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const json = await response.json();
+      console.log("Success:", JSON.stringify(json));
+      setMessage("Success");
+      alert("Form Submitted Successfully");
+    } catch (error) {
+      console.error("Error:", error);
+      setMessage("Error");
+    }
+  };
+
   return (
     <div
       style={{
@@ -100,9 +136,9 @@ export default function sakshi() {
             <ul>
               <li>Name: Sakshi Sharma</li>
               <li>Location: Delhi</li>
-              <li>School: Vidyadeep Public School</li>
+
               <li>Age: 6</li>
-              <li>Doctor</li>
+              <li>School: Vidyadeep Public School</li>
             </ul>
           </p>
         </div>
@@ -129,6 +165,7 @@ export default function sakshi() {
             className="prsnl-photo"
           />
         </div>
+
         <div className="amount" style={{ width: "90%", margin: "auto" }}>
           <h3>Amount</h3>
 
@@ -166,7 +203,7 @@ export default function sakshi() {
               onClick={closeForm}
             />
             <hr className="line" />
-            <form action="/action_page.php" class="formContainer">
+            <form className="formContainer input-form" onSubmit={sendData}>
               <div>
                 <input
                   type="text"
@@ -175,6 +212,7 @@ export default function sakshi() {
                   placeholder="Name"
                   name="name"
                   required
+                  onChange={handleInput}
                 />
                 <FontAwesome className="form-icon" name="user" />
               </div>
@@ -186,6 +224,7 @@ export default function sakshi() {
                   placeholder="Email"
                   name="email"
                   required
+                  onChange={handleInput}
                 />
                 <FontAwesome className="form-icon" name="envelope" />
               </div>
@@ -198,6 +237,7 @@ export default function sakshi() {
                   name="phone"
                   pattern="[0-9]{10}"
                   required
+                  onChange={handleInput}
                 />
                 <FontAwesome className="form-icon" name="phone" />
               </div>
@@ -209,12 +249,12 @@ export default function sakshi() {
                   placeholder="Location"
                   name="location"
                   required
+                  onChange={handleInput}
                 />
                 <FontAwesome className="form-icon" name="map-marker" />
               </div>
-              <button type="submit" class="btn">
-                Confirm
-              </button>
+              <input name="submit" className="btn" type="submit" value="Send" />
+              <div>{message}</div>
             </form>
           </div>
         </div>
