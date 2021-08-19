@@ -38,7 +38,7 @@
     "url": "git+https://github.com/nitish-bpns/edopt-fe.git"
   },
   "scripts": {
-    "start": "PORT=3001 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -62,10 +62,5 @@
   "description": "",
   "bugs": {
     "url": "https://github.com/nitish-bpns/edopt-fe/issues"
-  },
-  "homepage": "/build",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
