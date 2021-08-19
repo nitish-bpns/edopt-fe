@@ -157,7 +157,7 @@ const FeaturesSplit = ({
         <div className="container">
           <div className={innerClasses}>
             <SectionHeader data={sectionHeader} className="center-content">
-              <h2>Signup As a Student</h2>
+              <h2>Contact Us</h2>
             </SectionHeader>
 
 
@@ -167,20 +167,20 @@ const FeaturesSplit = ({
                 <div className="split-item-content center-content-mobile reveal-from-left"
                   data-reveal-container=".split-item">
                   <p className="m-0">
-                    <p className="m-0">Your Information</p>
-                    <div className="row" style={{ marginTop: "2%" }}>
-                      <div className="column" style={{ paddingRight: "1%" }}>
+                    {/* <p className="m-0">Your Information</p> */}
+                    <div className="row" style={{ marginTop: "0%" }}>
+                      {/* <div className="column" style={{ paddingRight: "1%" }}>
                         <Input id="newsletter" type="name" value={studentName} onChange={(e) => { setStudentName(e.target.value) }} hasIcon="right" placeholder="Your Name"
                           name="name"
                           style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
                         </Input>
-                      </div>
-                      <div className="column" style={{ paddingLeft: "1%" }}>
+                      </div> */}
+                      {/* <div className="column" style={{ paddingLeft: "1%" }}>
                         <Input id="newsletter" type="name" value={studentUserName} onChange={(e) => { setStudentUserName(e.target.value) }} hasIcon="right" placeholder="Username"
                           name="name"
                           style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
                         </Input>
-                      </div>
+                      </div> 
                     </div>
                     <div className="row" style={{ marginTop: "2%" }}>
                       <div className="column" style={{ paddingRight: "1%" }}>
@@ -204,20 +204,20 @@ const FeaturesSplit = ({
                           onChange={(e) => { setStudentGender(e.target.value) }} value={studentGender}
                         >
                         </Input>
-                      </div>
+                      </div> 
                     </div>
                     <div className="row" style={{ marginTop: "2%" }}>
                       <div className="column" style={{ paddingRight: "1%" }}>
                         <Input id="newsletter" type="name" hasIcon="right"
                           onChange={(e) => { setStudentCity(e.target.value) }} value={studentCity}
-                          placeholder="Your City" name="city" style={{
+                          placeholder="Class" name="city" style={{
                             marginTop: "4%",
                             borderRadius: "20px",
                             borderColor: "grey"
                           }}>
                         </Input>
                       </div>
-                      <div className="column" style={{ paddingLeft: "1%" }}>
+                       <div className="column" style={{ paddingLeft: "1%" }}>
                         <Input id="newsletter" type="name" hasIcon="right"
                           onChange={(e) => { setStudentPincode(e.target.value) }} value={studentPincode}
                           placeholder="Your Pincode" name="pin" style={{
@@ -226,14 +226,39 @@ const FeaturesSplit = ({
                             borderColor: "grey"
                           }}>
                         </Input>
-                      </div>
+                      </div> */}
                     </div>
-                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Phone"
-                      name="phone"
+
+                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Name"
+                      name="Your Name"
+
+                      style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
+                    </Input>
+
+                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Age"
+                      name="Your Age"
+
+                      style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
+                    </Input>
+
+                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Class"
+                      name="Class"
+
+                      style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
+                    </Input>
+
+
+                    <Input id="newsletter" type="name" hasIcon="right" placeholder="School Name"
+                      name="School Name"
                       onChange={(e) => { setStudentPhone(e.target.value) }} value={studentPhone}
                       style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
                     </Input>
-                    <Input id="newsletter" type="number" hasIcon="right" placeholder="Your Standard"
+                    <Input id="newsletter" type="number" hasIcon="right" placeholder="Phone no."
+                      name="Phone no."
+                      onChange={(e) => { setStudentPhone(e.target.value) }} value={studentPhone}
+                      style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
+                    </Input>
+                    <Input id="newsletter" type="text" hasIcon="right" placeholder="Location"
                       onChange={(e) => { setStudentStandard(e.target.value) }} value={studentStandard}
                       name="standard"
                       style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
@@ -242,14 +267,14 @@ const FeaturesSplit = ({
                     <br />
                     <Input id="newsletter" type="name" hasIcon="right"
                       onChange={(e) => { setStudentIntroduction(e.target.value) }} value={studentIntroduction}
-                      placeholder="Your Introduction (50 Words)" name="intro" style={{
+                      placeholder="Your Story (50 Words)" name="intro" style={{
                         marginTop: "4%",
                         borderRadius: "20px",
                         borderColor: "grey",
                         height: "5rem"
                       }}>
                     </Input>
-                    <Input id="newsletter" type="name" hasIcon="right"
+                    {/* <Input id="newsletter" type="name" hasIcon="right"
                       onChange={(e) => { setStudentBody(e.target.value) }} value={studentBody}
                       placeholder="Body (150 Words)" name="body" style={{
                         marginTop: "4%",
@@ -257,22 +282,22 @@ const FeaturesSplit = ({
                         borderColor: "grey",
                         height: "7rem"
                       }}>
-                    </Input>
+                    </Input> */}
                   </p>
                 </div>
-                <div className={
+                {/* <div className={
                   classNames(
                     'split-item-image center-content-mobile reveal-from-bottom',
                     imageFill && 'split-item-image-fill'
                   )}
                   data-reveal-container=".split-item">
-                  {/* <Image
+                   <Image
 src={require('./../../assets/images/eDOPT.png')}
 alt="Features split 01"
 width={528}
-height={396} /> */}
-                  <p className="m-0">
-                    <p className="m-0">Guardian's Information</p>
+height={396} /> 
+                  <p className="m-0">*/}
+                {/* <p className="m-0">Guardian's Information</p>
                     <Input id="newsletter" type="name" hasIcon="right" placeholder="Guardian's Name"
                       name="name"
                       onChange={(e) => { setGuardianName(e.target.value) }} value={guardianName}
@@ -314,8 +339,15 @@ height={396} /> */}
                       name="address"
                       onChange={(e) => { setGuardianAddress(e.target.value) }} value={guardianAddress}
                       style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
-                    </Input>
-                    <br />
+                    </Input> */}
+
+                <Image
+                  src={require("./../../assets/images/eDOPT.png")}
+                  alt="Features split 01"
+                  width={528}
+                  height={396}
+                />
+                {/* <br />
                     <br />
                     <Input id="newsletter" type="name" hasIcon="right"
                       onChange={(e) => { setGuardianWants(e.target.value) }} value={guardianWants}
@@ -334,9 +366,9 @@ height={396} /> */}
                         borderColor: "grey",
                         height: "7rem"
                       }}>
-                    </Input>
-                  </p>
-                </div>
+                    </Input> */}
+                {/* </p>
+                </div> */}
               </div>
               {/* <center>
 <br />
@@ -355,8 +387,8 @@ height={396} /> */}
 <br /> */}
               <center>
                 <button type="submit" className="button button-primary button-wide-mobile button-sm"
-                  style={{ backgroundColor: "#3a936c", borderRadius: "20px" }}>Signup</button>
-                <br /><br />Already have an account? <a href="/Login_Student">Login</a>
+                  style={{ backgroundColor: "#3a936c", borderRadius: "20px" }}>Contact Us</button>
+                {/* <br /><br />Already have an account? <a href="/Login_Student">Login</a> */}
               </center>
             </div>
           </div>
